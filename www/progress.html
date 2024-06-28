@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom styles for this page */
+    body {
+      background-color: #f8f9fa;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .card {
+      height: 100%; /* Ensure all cards are of equal height */
+    }
+    .card-body {
+      padding: 1rem;
+      display: flex;
+      align-items: centSer; /* Center items vertically */
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0; /* Remove default margin */
+      margin-left: 10px; /* Adjust spacing between icon and text */
+    }
+    .list-group-item {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+    <header class="header bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="study.jpg" alt="" style="width: 40px; height: 40px;">
+            <div class="title ml-2">My Study Life - School Planner</div>
+          </div>
+          <div class="search d-flex align-items-center">
+            <input type="text" class="form-control mr-2" placeholder="Search">
+            <button type="button" class="btn btn-light">
+              <img src="search.png" alt="Search" style="width: 20px;">
+            </button>
+          </div>
+        </div>
+      </header>
+      
+  <main class="main py-4">
+    <div class="container">
+      <div class="row mb-4">
+        <section class="dashboard col-12">
+          <div class="card-deck">
+            <div class="card">
+              <a href="index.html" class="card-body text-decoration-none text-dark">
+                <img src="schedule.png" alt="Schedules Icon" style="width: 30px;">
+                <h5 class="card-title">Schedules</h5>
+              </a>
+            </div>
+            <div class="card">
+              <a href="deadlines.html" class="card-body text-decoration-none text-dark">
+                <img src="deadline.jpg" alt="Deadlines Icon" style="width: 30px;">
+                <h5 class="card-title">Deadlines</h5>
+              </a>
+            </div>
+            <div class="card">
+              <a href="progress.html" class="card-body text-decoration-none text-dark">
+                <img src="progress.png" alt="Progress Icon" style="width: 30px;">
+                <h5 class="card-title">Progress</h5>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <section class="notes-list col-md-6 mb-4">
+          <h2>Progress Tracking</h2>
+          <ul class="list-group">
+            <li class="note list-group-item">
+              <div class="note-title font-weight-bold">Schedule 1</div>
+              <div class="note-content">
+                <p>This is the progress for schedule 1.</p>
+              </div>
+            </li>
+            <li class="note list-group-item">
+              <div class="note-title font-weight-bold">Schedule 2</div>
+              <div class="note-content">
+                <p>This is the progress for schedule 2.</p>
+              </div>
+            </li>
+            <!-- Add more tasks as needed -->
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      &copy; Linda 2024 My Study Life. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDDjSuRM5HaKm8N2O-pBc9oyjDZiyFASFU",
+      authDomain: "studyapp-58bff.firebaseapp.com",
+      projectId: "studyapp-58bff",
+      storageBucket: "studyapp-58bff.appspot.com",
+      messagingSenderId: "781642254739",
+      appId: "1:781642254739:web:4a981822a5f8f6cfb40066",
+      measurementId: "G-P9WH02ZH4N"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
